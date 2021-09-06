@@ -33,3 +33,4 @@ def post(Map config = [:]) {
   if(postRC.equals(200)) {
     println(post.getInputStream().getText());
   }
+}
