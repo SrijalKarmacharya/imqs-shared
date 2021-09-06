@@ -1,6 +1,6 @@
 def call(Map config = [:]) {
   echo "checking 1"
-  def get = new URL("54.36.230.136:2000/api/machine/create/test5?config=test-infra").openConnection();
+  def get = new URL("http://54.36.230.136:2000/api/machine/create/test5?config=test-infra").openConnection();
   echo "checking 2"
   def getRC = get.getResponseCode();
   echo "checking 3"
@@ -14,7 +14,7 @@ def call(Map config = [:]) {
 def post(Map config = [:]) {
   // POST
   echo "checking 1"
-  def post = new URL("54.36.230.136:2000/api/machine/status/test1").openConnection();
+  def post = new URL("http://54.36.230.136:2000/api/machine/status/test1").openConnection();
   echo "checking 2"
   def message = '{"message":"this is a message"}'
   echo "checking 3"
